@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="format-detection" content="telephone=no">
+    <meta name="msapplication-tap-highlight" content="no">
+    <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width">
+    <link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css">
+    <link rel="stylesheet" type="text/css" href="css/index.css">
+</head>
+<body>
+
+<div data-role="page">
+    <div data-role="header">
+        <h1>AppDoor</h1>
+    </div>
+
+    <div data-role="main" class="ui-content">
+        <a href="#myPopupDialog" data-rel="popup"   data-role="button" data-icon="gear" data-position-to="window" data-transition="fade"> Logar</a>
+        <button id="entrar" data-role="button"  data-icon="check">Entrar na empresa</button>
+
+        <div data-role="popup" id="myPopupDialog">
+            <div data-role="header">
+                <h1>Login</h1>
+            </div>
+
+            <div data-role="main" class="ui-content">
+                <div role="main" class="ui-content">
+                    <form>
+                        <input id="usuario" required />
+                        <input id="senha" required />
+                        <button id="logar" data-role="button" data-icon="check">Logar</button>
+                        <a href="#" data-role="button" data-icon="back" data-rel="back">Go Back</a>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+        <script type="text/javascript" src="cordova.js"></script>
+        <script type="text/javascript" src="scripts/platformOverrides.js"></script>
+        <script type="text/javascript" src="scripts/jquery-2.2.2.min.js"></script>
+        <script src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
+        <script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+        <script type="text/javascript" src="scripts/bootstrap.min.js"></script>
+        <script type="text/javascript" src="scripts/knockout-3.4.0.js"></script>
+        <script type="text/javascript" src="scripts/index.js"></script>
+        <script src="scripts/script.js"></script>
+</body>
+</html>
+

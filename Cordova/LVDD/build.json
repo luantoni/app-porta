@@ -1,0 +1,11 @@
+{
+     "android": {
+         "release": {
+             "keystore":"c:\\appG.keystore",
+             "storePassword": "123456",
+             "alias": "appTeste",
+             "password" : "123456",
+             "keystoreType": ""
+         }
+     }
+ }
