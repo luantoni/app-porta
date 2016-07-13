@@ -1,22 +1,22 @@
 ﻿var OpenWeatherAppKey = "0c2995af981572aae8f711564e88b1db";
-
+var dados = [];
 function logar() {
     var usuario = $('#usuario').val();
     var senha = $('#senha').val();
-    console.log(usuario);
-    console.log(senha);
-
-    if (usuario == "" && senha == "") {
-        var retornoEmail = testeEmail(usuario);
-        console.log("Nao esta vazio");
-    }
-    else {
+    
+    if (usuario == "" || senha == "") {
         confirm("Preencha todos os campos");
         event.preventDefault();
     }
+    else {
+        var retornoEmail = testeEmail(usuario, senha);
+        if (retornoEmail == 1) {
+            dados = [usuario, senha];
+        }
+    }
 }
 
-function testeEmail(usuario) {
+function testeEmail(usuario, senha) {
     var tamanhoTotal = usuario.length;
     var dominio = usuario.indexOf("@");
     var email = usuario.substring(0, dominio);
@@ -30,12 +30,11 @@ function testeEmail(usuario) {
         confirm("Este e-mail não tem acesso ao site!");
         event.preventDefault();
     }
-
 }
 
 function entrar() {
+    console.log(dados);
     var queryString = "http://192.168.1.154:3000/unlock";
-    console.log("Ola");
     $.getJSON(queryString, function (results) {
         mostra(results);
 
