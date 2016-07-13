@@ -1,5 +1,11 @@
 ﻿var OpenWeatherAppKey = "0c2995af981572aae8f711564e88b1db";
 var dados = [];
+
+function back() {
+    $('#senha').val("");
+    $('#usuario').val("");
+}
+
 function logar() {
     var usuario = $('#usuario').val();
     var senha = $('#senha').val();
@@ -11,6 +17,8 @@ function logar() {
     else {
         var retornoEmail = testeEmail(usuario, senha);
         if (retornoEmail == 1) {
+            $('#senha').val("");
+            $('#usuario').val("");
             dados = [usuario, senha];
         }
     }
@@ -33,8 +41,8 @@ function testeEmail(usuario, senha) {
 }
 
 function entrar() {
-    console.log(dados);
-    var queryString = "http://192.168.1.154:3000/unlock";
+    var queryString = "http://192.168.1.154:3000/unlock?key=" + dados[1];
+    console.log(queryString);
     $.getJSON(queryString, function (results) {
         mostra(results);
 
