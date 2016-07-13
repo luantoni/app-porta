@@ -1,9 +1,10 @@
 ﻿var OpenWeatherAppKey = "0c2995af981572aae8f711564e88b1db";
 var dados = [];
 
-function back() {
-    $('#senha').val("");
-    $('#usuario').val("");
+function deslogar() {
+    dados = [];
+    $('#logarBtn').show();
+    $('#deslogar').hide();
 }
 
 function logar() {
@@ -19,6 +20,9 @@ function logar() {
         if (retornoEmail == 1) {
             $('#senha').val("");
             $('#usuario').val("");
+            $('#logarBtn').hide();
+            $('#deslogar').show();
+
             dados = [usuario, senha];
         }
     }

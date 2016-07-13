@@ -14,8 +14,16 @@
         <h1>AppDoor</h1>
     </div>
 
+    <div class="user">
+        <img id="user-photo" src="http://mariovalney.com/wp-content/uploads/2015/06/user-anonimo.jpg">
+        <h1>Olá, <span id="user-name">visitante</span>!</h1>
+        <p id="user-email"></p>
+    </div>
+
     <div data-role="main" class="ui-content">
-        <a href="#myPopupDialog" data-rel="popup"   data-role="button" data-icon="gear" data-position-to="window" data-transition="fade"> Logar</a>
+        <a href="#myPopupDialog" data-rel="popup"  id="logarBtn" data-role="button" data-icon="gear" data-position-to="window" data-transition="fade"> Logar</a>
+        <button id="deslogar" data-role="button" data-icon="gear">Deslogar</button>
+
         <button id="entrar" data-role="button"  data-icon="check">Entrar na empresa</button>
 
         <div data-role="popup" id="myPopupDialog">
@@ -29,7 +37,7 @@
                         <input id="usuario" required />
                         <input id="senha" required />
                         <button id="logar" data-role="button" data-icon="check">Logar</button>
-                        <a href="#" id="back" data-role="button" data-icon="back" data-rel="back">Go Back</a>
+                        <a href="#" data-role="button" data-icon="back" data-rel="back">Go Back</a>
                     </form>
                 </div>
             </div>

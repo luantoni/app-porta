@@ -15,7 +15,8 @@
         document.addEventListener('resume', onResume.bind(this), false);
         $('#logar').click(logar);
         $('#entrar').click(entrar);
-        $('#back').click(back);
+        $('#deslogar').click(deslogar);
+
 
     };
 
