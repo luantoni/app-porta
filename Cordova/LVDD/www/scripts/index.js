@@ -13,9 +13,9 @@
         // Handle the Cordova pause and resume events
         document.addEventListener('pause', onPause.bind(this), false);
         document.addEventListener('resume', onResume.bind(this), false);
-        $('#logar').click(logar);
-        $('#entrar').click(entrar);
-        $('#deslogar').click(deslogar);
+        //$('#logar').click(logar);
+        //$('#entrar').click(entrar);
+        //$('#deslogar').click(deslogar);
 
 
     };
